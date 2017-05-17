@@ -48,7 +48,7 @@ func New(etcdErrWriter io.Writer) (*Harness, error) {
 	if err != nil {
 		return nil, err
 	}
-	s.etcdDir, err = ioutil.TempDir("/tmp", "etcd_testserver")
+	s.etcdDir, err = ioutil.TempDir("", "etcd_testserver")
 	if err != nil {
 		return nil, fmt.Errorf("failed allocating new dir: %v", err)
 	}
